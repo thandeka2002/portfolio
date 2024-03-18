@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    background: linear-gradient(180deg,  #333 120%, transparent 50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home {
+    height: 100vh;
+    background: linear-gradient(-90deg,  #333 50%, transparent 50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+}
+
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add styles for profile card */
+/* Modify styles to move the image to the left and increase its size */
+.profile-card img {
+    width: 300px; /* Increase the width */
+    height: 400px; /* Maintain aspect ratio */
+    border-radius: 10px; /* Adjust border radius */
+    margin-right: 40px; /* Move the image to the left */
+}
+
+/* Add animation to the card content */
+.card-content {
+    position: relative;
+    overflow: hidden;
+    max-width:600px;
+    text-align:left;
+}
+
+.container p ,h3{
+    font-size:40px;
+    color:transparent;
+    -webkit-text-stroke: .5px #fff;
+    background-image: linear-gradient(salmon,salmon);
+    background-repeat: no-repeat;
+    -webkit-background-clip:text;
+    background-clip: text;
+    background-position: -510px 0;
+    animation:animateText 6s linear infinite;
+    text-align:center;
+    padding-right:60px;
+    
+
+}
+@keyframes animateText{
+    0%,
+    95%,
+    100%{
+        background-position: -510px 0;
+       
+    }
+    65%,85%{
+        background-position: 0 0; 
+    }
+}
+
+/* Define animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px; /* Add some space between links */
+}
+nav a:hover,
+nav a.active{
+    color: salmon;
+}
+.description-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 80px; /* Add some space between the image and the description */
+}
+
+.description-card h3 {
+    color: black;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.description-card p {
+    color: black;
+    font-size: 18px;
+}
+
+
+
+nav a:first-child {
+    margin-left: 0; /* No margin for the first link */
+}
